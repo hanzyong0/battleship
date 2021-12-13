@@ -1,12 +1,16 @@
-function Ship(n) {
-  const array = Array.from('O'.repeat(n));
-  const hit = (index) => {
-    array[index] = 'X';
+function Ship(type, length, isVertical) {
+  const hits = [];
+
+  const hit = (position) => {
+    if (hits.includes(position) || position < 0 || position >= length) {
+      return;
+    };
+    hits.push(position);
   };
-  const isSunk = () => {
-    array.every((element) => element === 'X')
-  };
-  return { array, hit, isSunk };
-}
+
+  const isSunk = () => hits.length === length;
+
+  return { type, length, isVertical, hits, hit, isSunk };
+};
 
 export default Ship;
