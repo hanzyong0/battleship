@@ -7,10 +7,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Battleship</title>
   <script src="bundle.js" defer></script>
+  <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
 </head>
 
 <body>
-
+  <header>
+    <h1>Battleship</h1>
+    <p class="status">Please place your ships</p>
+    <button type="button" class="new-game">New Game</button>
+  </header>
+  <main>
+    <div class="left-container">
+      <div class="title">Player</div>
+      <div class="board"></div>
+      <div>
+        <button type="button" class="orientation">Change Orientation</button>
+      </div>
+    </div>
+    <div class="right-container">
+      <div class="title">Computer</div>
+      <div class="board"></div>
+      <div>
+        <button type="button" class="orientation hide">Change Orientation</button>
+      </div>
+    </div>
+  </main>
 </body>
 
 </html>
