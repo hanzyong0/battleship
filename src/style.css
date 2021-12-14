@@ -68,14 +68,27 @@ main {
 	flex: 1;
 }
 
+.title {
+	font-size: 1.3em;
+}
+
 .board {
 	border: 3px solid var(--cell);
 	height: 350px;
 	width: 350px;
+	display: flex;
+	flex-direction: column;
 }
 
-.title {
-	font-size: 1.3em;
+.row {
+	flex: 1;
+	display: flex;
+}
+
+.player,
+.cpu {
+	border: 1px solid var(--cell);
+	flex: 1;
 }
 
 .hide {
