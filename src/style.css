@@ -78,6 +78,7 @@ main {
 	width: 350px;
 	display: flex;
 	flex-direction: column;
+	cursor: pointer;
 }
 
 .row {
@@ -93,4 +94,12 @@ main {
 
 .hide {
 	visibility: hidden;
+}
+
+.hovered {
+	background-color: var(--cell);
+}
+
+.ship {
+	background-color: var(--cell);
 }
