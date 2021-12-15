@@ -103,3 +103,11 @@ main {
 .ship {
 	background-color: var(--cell);
 }
+
+.hit {
+	background-color: red;
+}
+
+.missed {
+	background-color: var(--text);
+}

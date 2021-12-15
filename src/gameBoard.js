@@ -34,7 +34,7 @@ function GameBoard() {
     if (boardInfo.board[position].ship && !boardInfo.board[position].isHit) {
       boardInfo.board[position].isHit = true;
     } else if (boardInfo.board[position].ship && boardInfo.board[position].isHit) {
-      boardInfo.board[position].isHit = true;
+      return;
     } else {
       boardInfo.missed.push(position);
     }

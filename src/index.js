@@ -2,16 +2,26 @@ import './style.css';
 import createBoardDOM from './createBoardDOM';
 import Player from './player.js';
 import NewGame from './newGame';
+import playGame from './playGame';
 
-const a = Player('1');
-const playerBoard = document.querySelector('.player-board');
-createBoardDOM(a, playerBoard);
+const gameboards = NewGame();
+const playerGameBoard = gameboards.playerGameBoard;
+const cpuGameBoard = gameboards.cpuGameBoard;
+const player = Player('Human');
+const cpu = Player('cpu');
 
-const b = Player('cpu');
-const cpuBoard = document.querySelector('.cpu-board');
-createBoardDOM(b, cpuBoard);
+const playerGameBoardDOM = document.querySelector(".player-board");
+const cpuGameBoardDOM = document.querySelector(".cpu-board");
 
-const game = NewGame();
+createBoardDOM(player, playerGameBoardDOM);
+createBoardDOM(cpu, cpuGameBoardDOM);
 
-game.addListeners();
-game.placeCPUShips();
+gameboards.addListeners();
+gameboards.placeCPUShips();
+
+playGame(player, playerGameBoard, cpu, cpuGameBoard);
+
+const button = document.querySelector('.new-game');
+button.addEventListener('click', () => {
+  location.reload();
+});

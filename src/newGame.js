@@ -69,6 +69,7 @@ function NewGame() {
   };
 
   const placeShips = (e) => {
+    const status = document.querySelector('.status');
     if (!e.target.classList.contains('hovered')) {
       return;
     };
@@ -98,6 +99,7 @@ function NewGame() {
       const patrol = Ship('patrol', 2, current.isVertical);
       playerGameBoard.placeShip(patrol, position);
       current.type = '';
+      status.textContent = 'Battle!';
     };
     current.length--;
     for (let i = 0; i < 100; i++) {
