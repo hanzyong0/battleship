@@ -1,4 +1,4 @@
 # battleship
 
 Live Demo:    
-https://hanzyong0.github.io/battleship/
+https://hanzyong1.github.io/battleship/
